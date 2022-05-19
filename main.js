@@ -1,7 +1,10 @@
 
 //Generate random number 
 
-const GenerateRandomNumber = (number) => Math.floor(Math.random() * number); 
+const GenerateRandomNumber = (number) => {
+    return Math.floor(Math.random() * number); 
+}
+    
 
 const messages = {
     "fisrtMessage": ['lawyer', 'musicain','footballer'],
