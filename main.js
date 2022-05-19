@@ -10,7 +10,7 @@ const messages = {
     "fisrtMessage": ['lawyer', 'musicain','footballer'],
     "secondMessage": ['armed robber', 'pick pocket', 'serial killer'],
     "thirdMessage": ['amazing', 'beautiful', 'sexy'],
-    "fourthMessage": ['ugly', 'dirty', 'nuissance']
+    "fourthMessage": ['ugly', 'dirty', 'clean']
 };
 
 // to store genearted message for display
@@ -18,13 +18,9 @@ let generatedMessage = [];
 
 //The length of the object message
 
-let properties = Object.keys(messages);
+for (let prop in messages){
 
-for (let prop in properties){
-
-    let objectLength = Object.keys(messages).length;
-
-    let optionIdx = GenerateRandomNumber(objectLength);
+    let optionIdx = GenerateRandomNumber(messages[prop].length);
 
     switch (prop){
         case 'firstMessage': generatedMessage.push(`You are a/an ${messages[prop][optionIdx]}`);
@@ -33,13 +29,13 @@ for (let prop in properties){
         case 'secondMessage' : generatedMessage.push(`You are a/an ${messages[prop][optionIdx]}`);
         break;
 
-        case 'thirdMessage' : generatedMessage.push(`You are a/an ${messages[prop][optionIdx]}`);
+        case 'thirdMessage' : generatedMessage.push(`You are ${messages[prop][optionIdx]}`);
         break;
 
-        case 'fourthMessage' : generatedMessage.push(`You are a/an ${messages[prop][optionIdx]}`);
+        case 'fourthMessage' : generatedMessage.push(`You are ${messages[prop][optionIdx]}`);
         break;
 
-        //default : generatedMessage.push('You have no messages');
+        default : generatedMessage.push('You have no messages');
     }
 }
 
