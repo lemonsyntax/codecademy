@@ -42,6 +42,8 @@ for (let prop in messages){
 // Function to format message
 function formatMessage(m){
     const mf = generatedMessage.join('\n');
+
+    return mf;
 }
 
 console.log(formatMessage(generatedMessage));
